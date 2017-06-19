@@ -44,5 +44,9 @@
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Recherche"
+  "SEARCH_TITLE": "Recherche",
+
+  "CHOIX_INTRO": "Veillez choisir :",
+  "APPLI": "Lancer l'application",
+  "DEMO" : "lancer la démo"
 }

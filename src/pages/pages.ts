@@ -1,3 +1,4 @@
+import { ChoixPage } from './choix/choix';
 import { ListMasterPage } from './list-master/list-master';
 import { SearchPage } from './search/search';
 import { SettingsPage } from './settings/settings';
@@ -15,3 +16,7 @@ export const MainPage = TabsPage;
 export const Tab1Root = ListMasterPage;
 export const Tab2Root = SearchPage;
 export const Tab3Root = SettingsPage;
+
+
+//Page de choix entre l'application réelle et démo
+export const PremierePage = ChoixPage;
