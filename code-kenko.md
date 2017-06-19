@@ -8,4 +8,4 @@ B)
 Bien documenter le code (le plugin "document this" est une bonne aide pour cela)
 
 C) 
-Faire des commits unitaire (une fonctionnalité unitaire = un commit) et mettre un message compréhensible qui permet de bein comprendre le commit. Ne pas hésiter à faire plusieurs commits différents les uns à la suite des autres et à multiplier le nombre de commits si besoin !
+Faire des commits unitaire (une fonctionnalité unitaire = un commit) et mettre un message clair qui permet de bein comprendre le commit. Ne pas hésiter à faire plusieurs commits différents les uns à la suite des autres et à multiplier le nombre de commits si besoin !
