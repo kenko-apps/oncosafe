@@ -15,22 +15,22 @@
       <form [formGroup]="slideUnForm">
         
         <ion-item>
-          <ion-label floating>Prénom</ion-label>
+          <ion-label floating>{{ 'FORM_PRENOM' | translate }}</ion-label>
            <ion-input formControlName="prenom" type="text"></ion-input>
         </ion-item>
  
         <ion-item>
-          <ion-label floating>Nom</ion-label>
+          <ion-label floating>{{ 'FORM_NOM' | translate }}</ion-label>
           <ion-input formControlName="nom" type="text"></ion-input>
         </ion-item>
  
         <ion-item>
-          <ion-label floating>Date de naissance</ion-label>
+          <ion-label floating>{{ 'FORM_DATE_NAISSANCE' | translate }}</ion-label>
           <ion-input formControlName="date_naissance" type="date"></ion-input>
         </ion-item>
         
         <ion-item>
-          <ion-label floating>Oncologue référent</ion-label>
+          <ion-label floating>{{ 'FORM_ONCO_REF' | translate }}</ion-label>
           <ion-input formControlName="onco_ref" type="text"></ion-input>
         </ion-item>
         
