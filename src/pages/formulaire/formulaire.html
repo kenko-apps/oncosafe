@@ -8,18 +8,46 @@
 
 <ion-content no-bounce>
   <ion-slides pager="true" (ionWillChange)="onSlideChangeStart($event)">
-    <ion-slide *ngFor="let slide of slides">
-      <img [src]="slide.image" class="slide-image" />
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
-    </ion-slide>
+   
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
-      <h2 class="slide-title">{{ 'TUTORIAL_SLIDE4_TITLE' | translate }}</h2>
+      
+      <h2 class="slide-title">{{ 'FORM_DONNEES_PERSONNELLES' | translate }}</h2>
+      <form [formGroup]="slideUnForm">
+        
+        <ion-item>
+          <ion-label floating>Prénom</ion-label>
+           <ion-input formControlName="prenom" type="text"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+          <ion-label floating>Nom</ion-label>
+          <ion-input formControlName="nom" type="text"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+          <ion-label floating>Date de naissance</ion-label>
+          <ion-input formControlName="date_naissance" type="date"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label floating>Oncologue référent</ion-label>
+          <ion-input formControlName="onco_ref" type="text"></ion-input>
+        </ion-item>
+        
+       
+        
+      </form>
+
+
       <button ion-button icon-end large clear (click)="startApp()">
         {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
+    </ion-slide>
+     <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image" />
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
     </ion-slide>
   </ion-slides>
 </ion-content>

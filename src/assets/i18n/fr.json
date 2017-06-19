@@ -48,5 +48,11 @@
 
   "CHOIX_INTRO": "Veillez choisir :",
   "APPLI": "Lancer l'application",
-  "DEMO" : "lancer la démo"
+  "DEMO" : "lancer la démo",
+
+  "FORM_DONNEES_PERSONNELLES" : "Données personnelles",
+  "FORM_PRENOM" : "Prénom",
+  "FORM_NOM" : "Nom",
+  "FORM_DATE_NAISSANCE" : "Date de naissance",
+  "FORM_ONCO_REF" : "Oncologue référent"
 }

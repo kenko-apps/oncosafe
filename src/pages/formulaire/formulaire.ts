@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { MenuController, NavController } from 'ionic-angular';
 
@@ -18,10 +19,24 @@ export interface Slide {
   templateUrl: 'formulaire.html'
 })
 export class FormulairePage {
+
+  slideUnForm: FormGroup;
+  slideDeuxForm: FormGroup;
+
   slides: Slide[];
   showSkip = true;
 
-  constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService) {
+  constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public formBuilder: FormBuilder) {
+    
+    
+    this.slideUnForm = formBuilder.group({
+        nom: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        prenom: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        date_naissance: [''],
+        onco_ref: [''],
+    });
+ 
+
     translate.get(["TUTORIAL_SLIDE1_TITLE",
       "TUTORIAL_SLIDE1_DESCRIPTION",
       "TUTORIAL_SLIDE2_TITLE",
@@ -50,6 +65,8 @@ export class FormulairePage {
         ];
       });
   }
+
+
 
   startApp() {
     this.navCtrl.setRoot(WelcomePage, {}, {
