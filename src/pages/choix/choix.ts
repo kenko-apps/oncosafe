@@ -1,3 +1,4 @@
+import { FormulairePage } from './../formulaire/formulaire';
 import { FirstRunPage } from './../pages';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -23,6 +24,6 @@ export class ChoixPage {
   }
 
   lancerAppli() {
-    this.navCtrl.push(FirstRunPage);
+    this.navCtrl.push(FormulairePage);
   }
 }

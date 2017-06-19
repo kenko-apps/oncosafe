@@ -18,6 +18,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ChoixPage } from '../pages/choix/choix';
+import { FormulairePage } from './../pages/formulaire/formulaire';
 
 import { Settings } from '../providers/providers';
 
@@ -48,6 +49,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
+    { title: 'formulaire', component: FormulairePage },
     { title: 'Choix', component: ChoixPage },
     { title: 'Tutorial', component: TutorialPage },
     { title: 'Welcome', component: WelcomePage },

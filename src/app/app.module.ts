@@ -21,6 +21,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ChoixPage } from '../pages/choix/choix';
+import { FormulairePage } from './../pages/formulaire/formulaire';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -73,7 +74,8 @@ export function provideSettings(storage: Storage) {
     TabsPage,
     TutorialPage,
     WelcomePage,
-    ChoixPage
+    ChoixPage, 
+    FormulairePage
   ],
   imports: [
     BrowserModule,
@@ -105,7 +107,8 @@ export function provideSettings(storage: Storage) {
     TabsPage,
     TutorialPage,
     WelcomePage,
-    ChoixPage
+    ChoixPage,
+    FormulairePage
   ],
   providers: [
     Api,
