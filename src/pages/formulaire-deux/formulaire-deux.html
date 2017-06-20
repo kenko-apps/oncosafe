@@ -1,0 +1,28 @@
+<ion-header no-shadow>
+  <ion-navbar>
+    <ion-title>
+      <h2 class="slide-title">{{ 'FORM_MALADIE' | translate }}</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <form [formGroup]="slideDeuxForm">
+    <ion-item>
+      <ion-label floating>{{ 'FORM_ORGANE_PRIMITIF' | translate }}</ion-label>
+      <ion-input formControlName="organe_primitif" type="text"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label floating>{{ 'FORM_DATE_DIAGNOSTIC' | translate }}</ion-label>
+      <ion-input formControlName="date_diagnostic" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>{{ 'FORM_NOM_TRAITEMENT' | translate }}</ion-label>
+      <ion-input formControlName="nom_traitement" type="text"></ion-input>
+    </ion-item>
+  </form>
+  <!--button ion-button icon-end large clear (click)="nextPage()">
+    {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button-->
+</ion-content>

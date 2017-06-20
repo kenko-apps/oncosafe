@@ -54,5 +54,9 @@
   "FORM_PRENOM" : "Prénom",
   "FORM_NOM" : "Nom",
   "FORM_DATE_NAISSANCE" : "Date de naissance",
-  "FORM_ONCO_REF" : "Oncologue référent"
+  "FORM_ONCO_REF" : "Oncologue référent",
+  "FORM_MALADIE" : "Maladie",
+  "FORM_ORGANE_PRIMITIF" : "Organe primitif atteint",
+  "FORM_DATE_DIAGNOSTIC" : "Date du diagnostic",
+  "FORM_NOM_TRAITEMENT" : "Nom du traitement anti-cancéreux"
 }

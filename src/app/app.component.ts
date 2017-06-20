@@ -19,6 +19,8 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ChoixPage } from '../pages/choix/choix';
 import { FormulairePage } from './../pages/formulaire/formulaire';
+import { FormulairePageUn } from './../pages/formulaire-un/formulaire-un';
+import { FormulairePageDeux } from './../pages/formulaire-deux/formulaire-deux';
 
 import { Settings } from '../providers/providers';
 
@@ -49,6 +51,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
+    { title: 'formulaire-un', component: FormulairePageUn },
+    { title: 'formulaire-deux', component: FormulairePageDeux },
     { title: 'formulaire', component: FormulairePage },
     { title: 'Choix', component: ChoixPage },
     { title: 'Tutorial', component: TutorialPage },

@@ -1,0 +1,32 @@
+<ion-header no-shadow>
+  <ion-navbar>
+    <ion-title>
+      <h2 class="slide-title">{{ 'FORM_DONNEES_PERSONNELLES' | translate }}</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <form [formGroup]="slideUnForm">
+    <ion-item>
+      <ion-label floating>{{ 'FORM_PRENOM' | translate }}</ion-label>
+      <ion-input formControlName="prenom" type="text"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label floating>{{ 'FORM_NOM' | translate }}</ion-label>
+      <ion-input formControlName="nom" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>{{ 'FORM_DATE_NAISSANCE' | translate }}</ion-label>
+      <ion-input formControlName="date_naissance" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>{{ 'FORM_ONCO_REF' | translate }}</ion-label>
+      <ion-input formControlName="onco_ref" type="text"></ion-input>
+    </ion-item>
+  </form>
+  <button ion-button icon-end large clear (click)="nextPage()">
+    {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+</ion-content>
