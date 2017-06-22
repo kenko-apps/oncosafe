@@ -18,7 +18,10 @@
     </ion-item>
     <ion-item>
       <ion-label floating>{{ 'FORM_DATE_NAISSANCE' | translate }}</ion-label>
-      <ion-input formControlName="date_naissance" type="date"></ion-input>
+      <ion-datetime formControlName="date_naissance" displayFormat="DD MMM YYYY" 
+        monthShortNames="jan, f\u00e9v, mars, avr, mai, juin, juil, ao\u00fbt, sept, oct, nov, d\u00e9c">
+      </ion-datetime>
+      <!--ion-input formControlName="date_naissance" type="date"></ion-input-->
     </ion-item>
     <ion-item>
       <ion-label floating>{{ 'FORM_ONCO_REF' | translate }}</ion-label>
