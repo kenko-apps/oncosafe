@@ -7,11 +7,13 @@ import { TranslateService } from '@ngx-translate/core';
 import { FormulairePageDeux } from './../formulaire-deux/formulaire-deux';
 
 @Component({
+  selector: 'formulaire-un',
   templateUrl: 'formulaire-un.html'
 })
 export class FormulairePageUn {
 
   slideUnForm: FormGroup;
+  submitAttempt: boolean = false;
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public formBuilder: FormBuilder) {
     this.slideUnForm = formBuilder.group({
         prenom: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('([a-zA-Zéèêëàäâùüûïîöôçÿ ]*)([\-]?)([a-zA-Zéèêëàäâùüûïîöôçÿ ]*)'), Validators.required])],
@@ -22,7 +24,13 @@ export class FormulairePageUn {
   }
 
   nextPage() {
-    this.navCtrl.push(FormulairePageDeux);
+    this.submitAttempt = true;
+ 
+    if(!this.slideUnForm.valid){
+    } else {
+      this.navCtrl.push(FormulairePageDeux);
+      console.log("success!")
+      console.log(this.slideUnForm.value);
+    }
   }
-
 }
