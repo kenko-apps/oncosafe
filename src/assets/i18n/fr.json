@@ -62,6 +62,9 @@
   "FORM_ONCO_REF_ALERTE" : "Entrez un nom d'oncologue valide.",
   "FORM_MALADIE" : "Maladie",
   "FORM_ORGANE_PRIMITIF" : "Organe primitif atteint",
+  "FORM_ORGANE_PRIMITIF_ALERTE" : "Entrez un nom d'organe valide.",
   "FORM_DATE_DIAGNOSTIC" : "Date du diagnostic",
-  "FORM_NOM_TRAITEMENT" : "Nom du traitement anti-cancéreux"
+  "FORM_DATE_DIAGNOSTIC_ALERTE" : "Entrez une date de diagnostic.",
+  "FORM_NOM_TRAITEMENT" : "Nom du traitement anti-cancéreux",
+  "FORM_NOM_TRAITEMENT_ALERTE" : "Entrez un nom de traitement valide."
 }

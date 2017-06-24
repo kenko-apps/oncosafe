@@ -25,9 +25,7 @@ export class FormulairePageUn {
 
   nextPage() {
     this.submitAttempt = true;
- 
-    if(!this.slideUnForm.valid){
-    } else {
+    if(this.slideUnForm.valid){
       this.navCtrl.push(FormulairePageDeux);
       console.log("success!")
       console.log(this.slideUnForm.value);

@@ -7,26 +7,44 @@
 </ion-header>
 
 <ion-content no-bounce>
+  <p *ngIf="!slideDeuxForm.valid && submitAttempt" class="FormAlerte">{{ 'FORM_ALERTE' | translate }}</p>
   <form [formGroup]="slideDeuxForm">
-    <ion-item>
+
+    <ion-item no-lines>
       <ion-label floating>{{ 'FORM_ORGANE_PRIMITIF' | translate }}</ion-label>
-      <ion-input formControlName="organe_primitif" type="text"></ion-input>
-    </ion-item> 
-    <ion-item>
+      <ion-input [class.invalid]="!slideDeuxForm.controls.organe_primitif.valid && (slideDeuxForm.controls.organe_primitif.dirty || submitAttempt)" formControlName="organe_primitif" type="text"></ion-input>
+    </ion-item>
+    <p *ngIf="!slideDeuxForm.controls.organe_primitif.valid  && (slideDeuxForm.controls.organe_primitif.dirty || submitAttempt)">{{ 'FORM_ORGANE_PRIMITIF_ALERTE' | translate }}</p>
+
+    <ion-item no-lines>
       <ion-label floating>{{ 'FORM_DATE_DIAGNOSTIC' | translate }}</ion-label>
-      <ion-input formControlName="date_diagnostic" type="date"></ion-input>
+      <ion-datetime [class.invalid]="!slideDeuxForm.controls.date_diagnostic.valid && (slideDeuxForm.controls.date_diagnostic.dirty || submitAttempt)" formControlName="date_diagnostic" displayFormat="DD MMM YYYY" 
+        monthShortNames="jan, f\u00e9v, mars, avr, mai, juin, juil, ao\u00fbt, sept, oct, nov, d\u00e9c">
+      </ion-datetime>
     </ion-item>
-    <ion-item>
-      <ion-label>Daenerys Targaryen</ion-label>
-      <ion-checkbox color="dark" checked="true"></ion-checkbox>
-    </ion-item>
-    <ion-item>
+    <p *ngIf="!slideDeuxForm.controls.date_diagnostic.valid  && (slideDeuxForm.controls.date_diagnostic.dirty || submitAttempt)">{{ 'FORM_DATE_DIAGNOSTIC_ALERTE' | translate }}</p>
+
+    <ion-list radio-group>
+      <p>Maladie</p>
+      <ion-item no-lines>
+        <ion-label>locale</ion-label>
+        <ion-radio value="locale"></ion-radio>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>avancée/métastasée</ion-label>
+        <ion-radio value="avance"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <ion-item no-lines>
       <ion-label floating>{{ 'FORM_NOM_TRAITEMENT' | translate }}</ion-label>
-      <ion-input formControlName="nom_traitement" type="text"></ion-input>
+      <ion-input [class.invalid]="!slideDeuxForm.controls.nom_traitement.valid && (slideDeuxForm.controls.nom_traitement.dirty || submitAttempt)" formControlName="nom_traitement" type="text"></ion-input>
     </ion-item>
+    <p *ngIf="!slideDeuxForm.controls.nom_traitement.valid  && (slideDeuxForm.controls.nom_traitement.dirty || submitAttempt)">{{ 'FORM_NOM_TRAITEMENT_ALERTE' | translate }}</p>
+
   </form>
-  <!--button ion-button icon-end large clear (click)="nextPage()">
+  <button class="ButtonValide" ion-button icon-end large clear (click)="nextPage()">
     {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
     <ion-icon name="arrow-forward"></ion-icon>
-  </button-->
+  </button>
 </ion-content>
