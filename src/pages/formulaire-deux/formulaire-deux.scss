@@ -52,10 +52,12 @@
             width: auto;
             margin-right: 10px;
             margin-bottom: 0px;
+            padding-left: 10px;
           }
           ion-label, ion-radio{
             margin: 0px;
-            padding: 0px;
+            padding: 0px 20px 0px 0px;
+            color: #999999;
           }
         }
         .invalid {

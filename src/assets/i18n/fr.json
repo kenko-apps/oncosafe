@@ -65,6 +65,9 @@
   "FORM_ORGANE_PRIMITIF_ALERTE" : "Entrez un nom d'organe valide.",
   "FORM_DATE_DIAGNOSTIC" : "Date du diagnostic",
   "FORM_DATE_DIAGNOSTIC_ALERTE" : "Entrez une date de diagnostic.",
+  "FORM_MALADIE_CHECK" : "Maladie",
+  "FORM_MALADIE_OPTION_1" : "locale",
+  "FORM_MALADIE_OPTION_2" : "avancée/métastasée",
   "FORM_NOM_TRAITEMENT" : "Nom du traitement anti-cancéreux",
   "FORM_NOM_TRAITEMENT_ALERTE" : "Entrez un nom de traitement valide."
 }
