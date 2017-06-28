@@ -51,6 +51,7 @@
   "DEMO" : "lancer la démo",
 
   "FORM_ALERTE" : "Veuillez remplir le formulaire correctement.",
+  "FORM_OPTION_ALERTE" : "Sélectionnez une option.",
   "FORM_DONNEES_PERSONNELLES" : "Données personnelles",
   "FORM_PRENOM" : "Prénom",
   "FORM_PRENOM_ALERTE" : "Entrez un prénom valide.",
@@ -60,6 +61,7 @@
   "FORM_DATE_NAISSANCE_ALERTE" : "Entrez une date de naissance.",
   "FORM_ONCO_REF" : "Oncologue référent",
   "FORM_ONCO_REF_ALERTE" : "Entrez un nom d'oncologue valide.",
+  
   "FORM_MALADIE" : "Maladie",
   "FORM_ORGANE_PRIMITIF" : "Organe primitif atteint",
   "FORM_ORGANE_PRIMITIF_ALERTE" : "Entrez un nom d'organe valide.",
@@ -68,6 +70,25 @@
   "FORM_MALADIE_CHECK" : "Maladie",
   "FORM_MALADIE_OPTION_1" : "locale",
   "FORM_MALADIE_OPTION_2" : "avancée/métastasée",
+  "FORM_CHIMIO_CHECK" : "Chimiothérapie en cours",
+  "FORM_CHIMIO_OPTION_1": "oui",
+  "FORM_CHIMIO_OPTION_2": "non",
+  "FORM_THERAPIE_CHECK" : "Thérapie orale en cours",
+  "FORM_THERAPIE_OPTION_1": "oui",
+  "FORM_THERAPIE_OPTION_2": "non",
   "FORM_NOM_TRAITEMENT" : "Nom du traitement anti-cancéreux",
-  "FORM_NOM_TRAITEMENT_ALERTE" : "Entrez un nom de traitement valide."
+  "FORM_NOM_TRAITEMENT_ALERTE" : "Entrez un nom de traitement valide.",
+
+  "FORM_MODE_VIE" : "Mode de vie",
+  "FORM_TABAC_CHECK" : "Fumez-vous, ou avez-vous fumé dans le pasé ?",
+  "FORM_TABAC_OPTION_1" : "oui",
+  "FORM_TABAC_OPTION_2" : "non",
+  "FORM_DATE_TABAC" : "Quand avez-vous commencé ?",
+  "FORM_DATE_TABAC_ALERTE" : "Entrez l'année pendant laquelle vous avez commencé à fumer.",
+  "FORM_ACTIVITE_CHECK" : "Faites-vous régulièrement de l'activité physique ?",
+  "FORM_ACTIVITE_OPTION_1" : "tous les jours",
+  "FORM_ACTIVITE_OPTION_2" : "plusieurs fois par semaine",
+  "FORM_ACTIVITE_OPTION_3" : "plusieurs fois par mois",
+  "FORM_ACTIVITE_OPTION_4" : "de temps en temps",
+  "FORM_ACTIVITE_OPTION_5" : "jamais"
 }
