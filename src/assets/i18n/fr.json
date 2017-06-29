@@ -102,10 +102,14 @@
 
   "FORM_THERAPIES_ALTERNATIVES" : "Thérapies alternatives",
   "FORM_THERAPIES_CHECK" : "Avez-vous recours à des thérapies alternatives ?",
+  "FORM_THERAPIE_OUI" : "oui",
+  "FORM_THERAPIE_NON" : "non",
+  "FORM_THERAPIES_TYPES" : "Quelles thérapies alternatives utilisez-vous ?",
   "FORM_THERAPIES_OPTION_1" : "phytothérapie",
   "FORM_THERAPIES_OPTION_2" : "extraits de plantes",
   "FORM_THERAPIES_OPTION_3" : "homéopathie",
   "FORM_THERAPIES_OPTION_4" : "acupuncture",
   "FORM_THERAPIES_OPTION_5" : "aromathérapie",
-  "FORM_THERAPIES_OPTION_6" : "autres"
+  "FORM_THERAPIES_OPTION_6" : "autres",
+  "FORM_CHECK_THERAPIE_ALERTE" : "Précisez les thérapies utilisées."
 }

@@ -10,34 +10,50 @@
   <p *ngIf="!slideQuatreForm.valid && submitAttempt" class="FormAlerte">{{ 'FORM_ALERTE' | translate }}</p>
   <form [formGroup]="slideQuatreForm" novalidate>
 
-    <ion-list>
+    <ion-list radio-group formControlName="therapies_check">
       <p>{{ 'FORM_THERAPIES_CHECK' | translate }}</p>
       <ion-item no-lines>
+        <ion-label [class.invalid-bis]="!slideQuatreForm.controls.therapies_check.valid && (slideQuatreForm.controls.therapies_check.dirty || submitAttempt)">{{ 'FORM_THERAPIE_OUI' | translate }}</ion-label>
+        <ion-radio (click)="therapieOui()" value="{{ 'FORM_THERAPIE_OUI' | translate }}" [class.invalid-bis]="!slideQuatreForm.controls.therapies_check.valid && (slideQuatreForm.controls.therapies_check.dirty || submitAttempt)"></ion-radio>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label [class.invalid-bis]="!slideQuatreForm.controls.therapies_check.valid && (slideQuatreForm.controls.therapies_check.dirty || submitAttempt)">{{ 'FORM_THERAPIE_NON' | translate }}</ion-label>
+        <ion-radio (click)="therapieNon()" value="{{ 'FORM_THERAPIE_NON' | translate }}" [class.invalid-bis]="!slideQuatreForm.controls.therapies_check.valid && (slideQuatreForm.controls.therapies_check.dirty || submitAttempt)"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <p *ngIf="!slideQuatreForm.controls.therapies_check.valid  && (slideQuatreForm.controls.therapies_check.dirty || submitAttempt)">{{ 'FORM_OPTION_ALERTE' | translate }}</p>
+
+    <ion-list *ngIf="questionsTherapie">
+      <p>{{ 'FORM_THERAPIES_TYPES' | translate }}</p>
+      <ion-item no-lines>
         <ion-label>{{ 'FORM_THERAPIES_OPTION_1' | translate }}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox formControlName="phytotherapie"></ion-checkbox>
       </ion-item>
       <ion-item no-lines>
         <ion-label>{{ 'FORM_THERAPIES_OPTION_2' | translate }}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox formControlName="extrait"></ion-checkbox>
       </ion-item>
       <ion-item no-lines>
         <ion-label>{{ 'FORM_THERAPIES_OPTION_3' | translate }}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox formControlName="homeopathie"></ion-checkbox>
       </ion-item>
       <ion-item no-lines>
         <ion-label>{{ 'FORM_THERAPIES_OPTION_4' | translate }}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox formControlName="acupuncture"></ion-checkbox>
       </ion-item>
       <ion-item no-lines>
         <ion-label>{{ 'FORM_THERAPIES_OPTION_5' | translate }}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox formControlName="aromatherapie"></ion-checkbox>
       </ion-item>
       <ion-item no-lines>
         <ion-label >{{ 'FORM_THERAPIES_OPTION_6' | translate }}</ion-label>
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox formControlName="autres" (click)="autres()"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines *ngIf="checkAutres">
+        <ion-input [class.invalid]="!slideQuatreForm.controls.autres_text.valid && (slideQuatreForm.controls.autres_text.dirty || submitAttempt)" formControlName="autres_text" type="text"></ion-input>
       </ion-item>
     </ion-list>
-    <!--p *ngIf="!slideQuatreForm.controls.therapie_check.valid  && (slideQuatreForm.controls.therapie_check.dirty || submitAttempt)">{{ 'FORM_OPTION_ALERTE' | translate }}</p-->
+    <p *ngIf="questionsTherapie && (!slideQuatreForm.valid && submitAttempt)">{{ 'FORM_CHECK_THERAPIE_ALERTE' | translate }}</p>
   
   </form>
   
