@@ -4,7 +4,7 @@ import { MenuController, NavController } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { FormulairePageDeux } from './../formulaire-deux/formulaire-deux';
+import { FormulairePageDeux } from '../formulaire-deux/formulaire-deux';
 
 @Component({
   selector: 'formulaire-un',

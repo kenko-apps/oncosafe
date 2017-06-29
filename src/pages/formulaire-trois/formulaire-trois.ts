@@ -4,7 +4,9 @@ import { MenuController, NavController } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
-/*import { FormulairePageQuatre } from './../formulaire-quatre/formulaire-quatre';*/
+import { TabacValidator } from '../../services/validators/questionTabac'
+
+/*import { FormulairePageQuatre } from '../formulaire-quatre/formulaire-quatre';*/
 
 @Component({
   selector: 'formulaire-trois',
@@ -15,14 +17,14 @@ export class FormulairePageTrois {
   slideTroisForm: FormGroup;
   submitAttempt: boolean = false;
   labelFrequenceTabac: boolean = false;
-  questionsTabac: boolean = false;
+  questionsTabac: boolean = false;  
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public formBuilder: FormBuilder) {
     this.slideTroisForm = formBuilder.group({
         tabac_check:  ['', Validators.required],
-        frequence_tabac:  ['', Validators.required],
-        date_tabac: ['', Validators.required],
+        frequence_tabac:  [''],
+        date_tabac: [''],
         activite_check: ['', Validators.required]
-    }); 
+    },{ validator: TabacValidator.isValid}); 
   }
 
   fumeOui() {
@@ -31,6 +33,8 @@ export class FormulairePageTrois {
 
   fumeNon() {
     this.questionsTabac = false;
+    this.slideTroisForm.controls.frequence_tabac.setValue("");
+    this.slideTroisForm.controls.date_tabac.setValue("");
   }
 
   changeLabel() {

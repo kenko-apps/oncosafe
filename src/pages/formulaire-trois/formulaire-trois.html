@@ -8,7 +8,7 @@
 
 <ion-content no-bounce>
   <p *ngIf="!slideTroisForm.valid && submitAttempt" class="FormAlerte">{{ 'FORM_ALERTE' | translate }}</p>
-  <form [formGroup]="slideTroisForm">
+  <form [formGroup]="slideTroisForm" novalidate>
 
     <ion-list radio-group formControlName="tabac_check">
       <p>{{ 'FORM_TABAC_CHECK' | translate }}</p>
@@ -36,14 +36,14 @@
         <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_7' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_7' | translate }}</ion-option>
       </ion-select>
     </ion-item>
-    <p *ngIf="!slideTroisForm.controls.frequence_tabac.valid  && (slideTroisForm.controls.frequence_tabac.dirty || submitAttempt)">{{ 'FORM_OPTION_ALERTE' | translate }}</p> 
+    <p *ngIf="questionsTabac && (!slideTroisForm.controls.frequence_tabac.valid  && (slideTroisForm.controls.frequence_tabac.dirty || submitAttempt))">{{ 'FORM_OPTION_ALERTE' | translate }}</p> 
 
     <ion-item *ngIf="questionsTabac" no-lines>
       <ion-label floating>{{ 'FORM_DATE_TABAC' | translate }}</ion-label>
       <ion-datetime cancelText="annuler" doneText="valider" [class.invalid]="!slideTroisForm.controls.date_tabac.valid && (slideTroisForm.controls.date_tabac.dirty || submitAttempt)" formControlName="date_tabac" displayFormat="YYYY" >
       </ion-datetime>
     </ion-item>
-    <p *ngIf="!slideTroisForm.controls.date_tabac.valid  && (slideTroisForm.controls.date_tabac.dirty || submitAttempt)">{{ 'FORM_DATE_TABAC_ALERTE' | translate }}</p> 
+    <p *ngIf="questionsTabac && (!slideTroisForm.controls.date_tabac.valid  && (slideTroisForm.controls.date_tabac.dirty || submitAttempt))">{{ 'FORM_DATE_TABAC_ALERTE' | translate }}</p> 
 
     <ion-list radio-group formControlName="activite_check">
       <p>{{ 'FORM_ACTIVITE_CHECK' | translate }}</p>

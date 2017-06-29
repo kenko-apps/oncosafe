@@ -8,7 +8,7 @@
 
 <ion-content no-bounce>
   <p *ngIf="!slideDeuxForm.valid && submitAttempt" class="FormAlerte">{{ 'FORM_ALERTE' | translate }}</p>
-  <form [formGroup]="slideDeuxForm">
+  <form [formGroup]="slideDeuxForm" novalidate>
 
     <ion-item no-lines>
       <ion-label floating>{{ 'FORM_ORGANE_PRIMITIF' | translate }}</ion-label>

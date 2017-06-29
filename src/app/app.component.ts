@@ -54,6 +54,7 @@ export class MyApp {
   pages: any[] = [
     { title: 'formulaire-un', component: FormulairePageUn },
     { title: 'formulaire-deux', component: FormulairePageDeux },
+    { title: 'formulaire-trois', component: FormulairePageTrois },
     { title: 'formulaire', component: FormulairePage },
     { title: 'Choix', component: ChoixPage },
     { title: 'Tutorial', component: TutorialPage },
