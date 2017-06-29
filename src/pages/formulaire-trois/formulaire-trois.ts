@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { TabacValidator } from '../../services/validators/questionTabac'
 
-/*import { FormulairePageQuatre } from '../formulaire-quatre/formulaire-quatre';*/
+import { FormulairePageQuatre } from '../formulaire-quatre/formulaire-quatre';
 
 @Component({
   selector: 'formulaire-trois',
@@ -44,7 +44,7 @@ export class FormulairePageTrois {
   nextPage() {
     this.submitAttempt = true;
     if(this.slideTroisForm.valid){
-      /*this.navCtrl.push(FormulairePageQuatre);*/
+      this.navCtrl.push(FormulairePageQuatre);
       console.log("success!")
       console.log(this.slideTroisForm.value);
     }

@@ -1,0 +1,48 @@
+<ion-header no-shadow>
+  <ion-navbar>
+    <ion-title>
+      <h2 class="slide-title">{{ 'FORM_THERAPIES_ALTERNATIVES' | translate }}</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <p *ngIf="!slideQuatreForm.valid && submitAttempt" class="FormAlerte">{{ 'FORM_ALERTE' | translate }}</p>
+  <form [formGroup]="slideQuatreForm" novalidate>
+
+    <ion-list>
+      <p>{{ 'FORM_THERAPIES_CHECK' | translate }}</p>
+      <ion-item no-lines>
+        <ion-label>{{ 'FORM_THERAPIES_OPTION_1' | translate }}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>{{ 'FORM_THERAPIES_OPTION_2' | translate }}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>{{ 'FORM_THERAPIES_OPTION_3' | translate }}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>{{ 'FORM_THERAPIES_OPTION_4' | translate }}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>{{ 'FORM_THERAPIES_OPTION_5' | translate }}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label >{{ 'FORM_THERAPIES_OPTION_6' | translate }}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <!--p *ngIf="!slideQuatreForm.controls.therapie_check.valid  && (slideQuatreForm.controls.therapie_check.dirty || submitAttempt)">{{ 'FORM_OPTION_ALERTE' | translate }}</p-->
+  
+  </form>
+  
+  <button class="ButtonValide" ion-button icon-end large clear (click)="nextPage()">
+    {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+</ion-content>

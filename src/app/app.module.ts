@@ -25,6 +25,7 @@ import { FormulairePage } from '../pages/formulaire/formulaire';
 import { FormulairePageUn } from '../pages/formulaire-un/formulaire-un';
 import { FormulairePageDeux } from '../pages/formulaire-deux/formulaire-deux';
 import { FormulairePageTrois } from '../pages/formulaire-trois/formulaire-trois';
+import { FormulairePageQuatre } from '../pages/formulaire-quatre/formulaire-quatre';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -81,7 +82,8 @@ export function provideSettings(storage: Storage) {
     FormulairePage,
     FormulairePageUn,
     FormulairePageDeux,
-    FormulairePageTrois
+    FormulairePageTrois,
+    FormulairePageQuatre
   ],
   imports: [
     BrowserModule,
@@ -117,7 +119,8 @@ export function provideSettings(storage: Storage) {
     FormulairePage,
     FormulairePageUn,
     FormulairePageDeux,
-    FormulairePageTrois
+    FormulairePageTrois,
+    FormulairePageQuatre
   ],
   providers: [
     Api,

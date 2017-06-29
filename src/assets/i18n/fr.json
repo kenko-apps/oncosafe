@@ -98,5 +98,14 @@
   "FORM_ACTIVITE_OPTION_2" : "plusieurs fois par semaine",
   "FORM_ACTIVITE_OPTION_3" : "plusieurs fois par mois",
   "FORM_ACTIVITE_OPTION_4" : "de temps en temps",
-  "FORM_ACTIVITE_OPTION_5" : "jamais"
+  "FORM_ACTIVITE_OPTION_5" : "jamais",
+
+  "FORM_THERAPIES_ALTERNATIVES" : "Thérapies alternatives",
+  "FORM_THERAPIES_CHECK" : "Avez-vous recours à des thérapies alternatives ?",
+  "FORM_THERAPIES_OPTION_1" : "phytothérapie",
+  "FORM_THERAPIES_OPTION_2" : "extraits de plantes",
+  "FORM_THERAPIES_OPTION_3" : "homéopathie",
+  "FORM_THERAPIES_OPTION_4" : "acupuncture",
+  "FORM_THERAPIES_OPTION_5" : "aromathérapie",
+  "FORM_THERAPIES_OPTION_6" : "autres"
 }
