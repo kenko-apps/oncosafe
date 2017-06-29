@@ -14,18 +14,33 @@
       <p>{{ 'FORM_TABAC_CHECK' | translate }}</p>
       <ion-item no-lines>
         <ion-label [class.invalid-bis]="!slideTroisForm.controls.tabac_check.valid && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)">{{ 'FORM_TABAC_OPTION_1' | translate }}</ion-label>
-        <ion-radio value="{{ 'FORM_TABAC_OPTION_1' | translate }}" [class.invalid-bis]="!slideTroisForm.controls.tabac_check.valid && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)"></ion-radio>
+        <ion-radio (click)="fumeOui()" value="{{ 'FORM_TABAC_OPTION_1' | translate }}" [class.invalid-bis]="!slideTroisForm.controls.tabac_check.valid && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)"></ion-radio>
       </ion-item>
       <ion-item no-lines>
         <ion-label [class.invalid-bis]="!slideTroisForm.controls.tabac_check.valid && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)">{{ 'FORM_TABAC_OPTION_2' | translate }}</ion-label>
-        <ion-radio value="{{ 'FORM_TABAC_OPTION_2' | translate }}" [class.invalid-bis]="!slideTroisForm.controls.tabac_check.valid && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)"></ion-radio>
+        <ion-radio (click)="fumeNon()" value="{{ 'FORM_TABAC_OPTION_2' | translate }}" [class.invalid-bis]="!slideTroisForm.controls.tabac_check.valid && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)"></ion-radio>
       </ion-item>
     </ion-list>
-    <p *ngIf="!slideTroisForm.controls.tabac_check.valid  && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)">{{ 'FORM_TABAC_CHECK_ALERTE' | translate }}</p>
+    <p *ngIf="!slideTroisForm.controls.tabac_check.valid  && (slideTroisForm.controls.tabac_check.dirty || submitAttempt)">{{ 'FORM_OPTION_ALERTE' | translate }}</p>
 
-    <ion-item no-lines>
+    <ion-item *ngIf="questionsTabac" no-lines class="itemSelect">
+      <ion-label *ngIf="!labelFrequenceTabac" floating>{{ 'FORM_FREQUENCE_TABAC' | translate }}</ion-label>
+      <ion-label class="labelStacked" *ngIf="labelFrequenceTabac" stacked>{{ 'FORM_FREQUENCE_TABAC' | translate }}</ion-label>
+      <ion-select interface="popover" formControlName="frequence_tabac" (click)="changeLabel()" [class.invalid]="!slideTroisForm.controls.frequence_tabac.valid && (slideTroisForm.controls.frequence_tabac.dirty || submitAttempt)">
+        <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_1' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_1' | translate }}</ion-option>
+        <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_2' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_2' | translate }}</ion-option>
+        <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_3' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_3' | translate }}</ion-option>
+        <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_4' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_4' | translate }}</ion-option>
+        <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_5' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_5' | translate }}</ion-option>
+        <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_6' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_6' | translate }}</ion-option>
+        <ion-option value="{{ 'FORM_FREQUENCE_TABAC_OPTION_7' | translate }}">{{ 'FORM_FREQUENCE_TABAC_OPTION_7' | translate }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <p *ngIf="!slideTroisForm.controls.frequence_tabac.valid  && (slideTroisForm.controls.frequence_tabac.dirty || submitAttempt)">{{ 'FORM_OPTION_ALERTE' | translate }}</p> 
+
+    <ion-item *ngIf="questionsTabac" no-lines>
       <ion-label floating>{{ 'FORM_DATE_TABAC' | translate }}</ion-label>
-      <ion-datetime [class.invalid]="!slideTroisForm.controls.date_tabac.valid && (slideTroisForm.controls.date_tabac.dirty || submitAttempt)" formControlName="date_tabac" displayFormat="YYYY" >
+      <ion-datetime cancelText="annuler" doneText="valider" [class.invalid]="!slideTroisForm.controls.date_tabac.valid && (slideTroisForm.controls.date_tabac.dirty || submitAttempt)" formControlName="date_tabac" displayFormat="YYYY" >
       </ion-datetime>
     </ion-item>
     <p *ngIf="!slideTroisForm.controls.date_tabac.valid  && (slideTroisForm.controls.date_tabac.dirty || submitAttempt)">{{ 'FORM_DATE_TABAC_ALERTE' | translate }}</p> 
@@ -53,7 +68,7 @@
         <ion-radio value="{{ 'FORM_ACTIVITE_OPTION_5' | translate }}" [class.invalid-bis]="!slideTroisForm.controls.activite_check.valid && (slideTroisForm.controls.activite_check.dirty || submitAttempt)"></ion-radio>
       </ion-item>
     </ion-list>
-    <p *ngIf="!slideTroisForm.controls.activite_check.valid  && (slideTroisForm.controls.activite_check.dirty || submitAttempt)">{{ 'FORM_ACTIVITE_CHECK_ALERTE' | translate }}</p>
+    <p *ngIf="!slideTroisForm.controls.activite_check.valid  && (slideTroisForm.controls.activite_check.dirty || submitAttempt)">{{ 'FORM_OPTION_ALERTE' | translate }}</p>
   
   </form>
   
