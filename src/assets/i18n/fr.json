@@ -117,5 +117,8 @@
   "FORM_PHYTO_NOM" : "Nom du traitement",
   "FORM_PHYTO_NOM_ALERTE" : "Entrez un nom de traitement valide.",
   "FORM_PHYTO_DATE" : "Date de début du traitement",
-  "FORM_PHYTO_PLUS" : "Ajouter un traitement"
+  "FORM_PHYTO_PLUS" : "Ajouter un traitement",
+
+  "FORM_RESULTAT" : "Résultats du formulaire",
+  "FORM_RESULTAT_INTITULE" : "C'est fini"
 }

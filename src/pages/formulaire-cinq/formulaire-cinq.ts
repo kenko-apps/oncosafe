@@ -4,7 +4,7 @@ import { MenuController, NavController } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
-/*import { FormulaireResultat } from '../formulaire-resultat/formulaire-resultat';*/
+import { FormulaireResultat } from '../formulaire-resultat/formulaire-resultat';
 
 @Component({
   selector: 'formulaire-cinq',
@@ -14,6 +14,7 @@ export class FormulairePageCinq {
 
   slideCinqForm: FormGroup;
   submitAttempt: boolean = false;
+  checkTraitement: boolean = false;
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -34,9 +35,15 @@ export class FormulairePageCinq {
   }
 
   addPhyto() {
+    if (this.slideCinqForm.valid){
       // add phyto treatment to the list
       const control = <FormArray>this.slideCinqForm.controls['phytotraitement'];
       control.push(this.initPhytoNom());
+      this.checkTraitement = false;
+      this.submitAttempt = false;
+    }else{
+      this.checkTraitement = true;
+    }
   }
 
   removePhyto(i: number) {
@@ -48,7 +55,7 @@ export class FormulairePageCinq {
   nextPage() {
     this.submitAttempt = true;
     if(this.slideCinqForm.valid){
-      /*this.navCtrl.push(FormulaireResultat);*/
+      this.navCtrl.push(FormulaireResultat);
       console.log("success!")
       console.log(this.slideCinqForm.value);
     }

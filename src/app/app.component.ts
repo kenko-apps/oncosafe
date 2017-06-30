@@ -24,6 +24,7 @@ import { FormulairePageDeux } from './../pages/formulaire-deux/formulaire-deux';
 import { FormulairePageTrois } from './../pages/formulaire-trois/formulaire-trois';
 import { FormulairePageQuatre } from './../pages/formulaire-quatre/formulaire-quatre';
 import { FormulairePageCinq } from './../pages/formulaire-cinq/formulaire-cinq';
+import { FormulaireResultat } from './../pages/formulaire-resultat/formulaire-resultat';
 
 import { Settings } from '../providers/providers';
 
@@ -59,6 +60,7 @@ export class MyApp {
     { title: 'formulaire-trois', component: FormulairePageTrois },
     { title: 'formulaire-quatre', component: FormulairePageQuatre },
     { title: 'formulaire-cinq', component: FormulairePageCinq },
+    { title: 'formulaire-resultat', component: FormulaireResultat },
     { title: 'formulaire', component: FormulairePage },
     { title: 'Choix', component: ChoixPage },
     { title: 'Tutorial', component: TutorialPage },
