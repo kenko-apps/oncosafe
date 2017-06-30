@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { TherapieValidator } from '../../services/validators/questionTherapie'
 
-/*import { FormulairePageCinq } from '../formulaire-quatre/formulaire-cinq';*/
+import { FormulairePageCinq } from '../formulaire-cinq/formulaire-cinq';
 
 @Component({
   selector: 'formulaire-quatre',
@@ -59,7 +59,11 @@ export class FormulairePageQuatre {
   nextPage() {
     this.submitAttempt = true;
     if(this.slideQuatreForm.valid){
-      /*this.navCtrl.push(FormulairePageCinq);*/
+      if (this.slideQuatreForm.controls.phytotherapie.value){
+        this.navCtrl.push(FormulairePageCinq);
+      }else{
+        /*this.navCtrl.push(FormulaireResultat);*/
+      }
       console.log("success!")
       console.log(this.slideQuatreForm.value);
     }

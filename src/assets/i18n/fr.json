@@ -111,5 +111,11 @@
   "FORM_THERAPIES_OPTION_4" : "acupuncture",
   "FORM_THERAPIES_OPTION_5" : "aromathérapie",
   "FORM_THERAPIES_OPTION_6" : "autres",
-  "FORM_CHECK_THERAPIE_ALERTE" : "Précisez les thérapies utilisées."
+  "FORM_CHECK_THERAPIE_ALERTE" : "Précisez les thérapies utilisées.",
+
+  "FORM_PHYTO" : "Phytothérapies",
+  "FORM_PHYTO_NOM" : "Nom du traitement",
+  "FORM_PHYTO_NOM_ALERTE" : "Entrez un nom de traitement valide.",
+  "FORM_PHYTO_DATE" : "Date de début du traitement",
+  "FORM_PHYTO_PLUS" : "Ajouter un traitement"
 }

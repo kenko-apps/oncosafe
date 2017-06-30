@@ -1,0 +1,43 @@
+<ion-header no-shadow>
+  <ion-navbar>
+    <ion-title>
+      <h2 class="slide-title">{{ 'FORM_PHYTO' | translate }}</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <p *ngIf="!slideCinqForm.valid && submitAttempt" class="FormAlerte">{{ 'FORM_ALERTE' | translate }}</p>
+  
+  <form [formGroup]="slideCinqForm" novalidate>  
+    <ion-list formArrayName="phytotraitement">
+      <ion-item no-lines *ngFor="let  phytotmt of slideCinqForm.controls.phytotraitement.controls; let i=index">
+        <!--ion-row [formGroupName]="i"-->
+          <!--ion-label floating>{{ 'FORM_PHYTO_NOM' | translate }}</ion-label-->
+          <ion-input [formGroupName]="i" type="text"></ion-input>
+          <!--ion-input formControlName="phytonom" type="text"></ion-input-->
+          <!--ion-item no-lines>
+            <ion-label floating>{{ 'FORM_PHYTO_DATE' | translate }}</ion-label>
+            <ion-datetime cancelText="annuler" doneText="valider" formControlName="phyto_date" displayFormat="DD MMM YYYY" 
+              monthShortNames="jan, f\u00e9v, mars, avr, mai, juin, juil, ao\u00fbt, sept, oct, nov, d\u00e9c">
+            </ion-datetime>
+          </ion-item>
+          <ion-item no-lines>
+            <ion-icon name="close" (click)="removePhyto(i)"></ion-icon>">
+          </ion-item-->
+        <!--/ion-row-->
+      </ion-item>
+      <!--p *ngIf="!slideCinqForm.controls.date_diagnostic.valid  && (slideCinqForm.controls.date_diagnostic.dirty || submitAttempt)">{{ 'FORM_DATE_DIAGNOSTIC_ALERTE' | translate }}</p-->
+      <!--[class.invalid]="!slideCinqForm.controls[i].phyto_nom.valid && (slideCinqForm.controls[i].phyto_nom.dirty || submitAttempt)" -->
+    </ion-list>
+    <button ion-button icon-start medium clear (click)="addPhyto()">
+      <ion-icon name="add"></ion-icon>
+      {{ 'FORM_PHYTO_PLUS' | translate }}
+    </button>
+  </form>
+
+  <button class="ButtonValide" ion-button icon-end large clear (click)="nextPage()">
+    {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+</ion-content>
