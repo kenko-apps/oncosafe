@@ -4,7 +4,7 @@ import { MenuController, NavController } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { TabacValidator } from '../../services/validators/questionTabac'
+import { TabacValidator } from '../../validators/questionTabac'
 
 import { FormulairePageQuatre } from '../formulaire-quatre/formulaire-quatre';
 

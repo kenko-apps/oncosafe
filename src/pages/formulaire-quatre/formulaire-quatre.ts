@@ -4,7 +4,7 @@ import { MenuController, NavController } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { TherapieValidator } from '../../services/validators/questionTherapie'
+import { TherapieValidator } from '../../validators/questionTherapie'
 
 import { FormulaireResultat } from '../formulaire-resultat/formulaire-resultat';
 import { FormulairePageCinq } from '../formulaire-cinq/formulaire-cinq';
@@ -65,7 +65,7 @@ export class FormulairePageQuatre {
       }else{
         this.navCtrl.push(FormulaireResultat);
       }
-      console.log("success!")
+      console.log("success!");
       console.log(this.slideQuatreForm.value);
     }
   }

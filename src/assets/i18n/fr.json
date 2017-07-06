@@ -4,6 +4,7 @@
   "EMAIL": "E-mail",
   "LOGIN": "Connexion",
   "SIGNUP": "Inscription",
+  "ANONYME" : "Continuer sans se connecter",
 
   "TAB1_TITLE": "Items",
   "TAB2_TITLE": "Recherche",
